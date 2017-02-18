@@ -1,10 +1,10 @@
 import re
 
 def getWords(sentence, letter):
-	#str_regex = r"\b" + re.escape(letter) + r"\w+|\b\w+" + re.escape(letter) + r"\b"  
+	#str_regex = r"\b" + re.escape(letter) + r"\w+|\b\w+" + re.escape(letter) + r"\b"
+	#str_regex = r"(\b[\S&&[^t]]\S*t\b)|(\bt\S*[\S&&[^t]]\b)" 
 
-	str_regex = "\b" + re.escape(letter) + r"\w+\b\w+" + re.escape(letter) + r"\b"
-
+	print(str_regex)
 	return re.findall(str_regex, sentence, re.I)
 
 def extractFloats(s):
@@ -22,3 +22,6 @@ def main():
 
 if __name__ == "__main__":
 	main()
+
+
+#(^(\bT\w+t))?((\bt\w+)|(\b\w+t\b))
