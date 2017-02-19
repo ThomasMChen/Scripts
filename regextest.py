@@ -8,7 +8,7 @@ def getWords(sentence, letter):
 	return re.findall(str_regex, sentence, re.I)
 
 def extractFloats(s):
-	return re.findall(r"[-+]?\d*\.*\d+", s, re.I)
+	return re.findall(r"[-+]?\d*\.\d+", s, re.I)
 
 def main():
 	s = "The tires can tolerate temperatures between -32.5 and 110. That why they cost 149.95 dollars each."
